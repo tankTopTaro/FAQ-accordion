@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100dvh;
+    font-family: "Work Sans", sans-serif;
+    background-color: #f9eeff;
+}
+
+.bg-img {
+    height: 30dvh;
+    background-image: url('./assets/images/background-pattern-desktop.svg');
+    position: relative;
+}
+
+.container {
+    background-color: #fdfdfd;
+    width: 600px;
+    border-radius: 10px;
+    padding: 1.5rem;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.title {
+    display: flex;
+    gap: 1rem;
+}
+
+.accordion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.accordion:hover {
+    color: #c195d8;
+    
+}
+
+.panel {
+    padding-bottom: 1rem;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    color: #a18eac;
+    border-bottom: 1px solid #eedff7;
+}
+
+.icon {
+    transition: all 0.3s ease;
+}
+
+.icon.active {
+    transform: rotate(-180deg);
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 350px;
+    }
+
+    .accordion h4 {
+        font-size: 20px;
+        padding: 0 1rem;
+    }
+}
